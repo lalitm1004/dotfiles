@@ -29,6 +29,7 @@
     supabase-cli
     openssl_3
     prisma
+    prisma-engines
 
     # lsp
     clang-tools
