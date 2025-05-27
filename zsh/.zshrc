@@ -17,6 +17,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # add zsh plugins
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#c0c0c0'
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
