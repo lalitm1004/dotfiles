@@ -7,6 +7,7 @@ cursorline = true
 insert-final-newline = false
 gutters = ["line-numbers", "spacer", "diff"]
 idle-timeout = 1
+bufferline = "always"
 completion-timeout = 1
 completion-trigger-len = 1
 mouse = true
