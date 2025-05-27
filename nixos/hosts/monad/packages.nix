@@ -28,6 +28,5 @@
     git
     gh
     zoxide
-    cowsay
   ];
 }

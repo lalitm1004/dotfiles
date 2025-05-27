@@ -8,7 +8,9 @@ cd "$CONFIG_DIR"
 echo "Formatting .nix files..."
 alejandra .
 
-echo "Showingdiffs > "
+cd "$REPO_DIR"
+
+echo "Showing diffs > "
 git diff -U0 '*.nix'
 
 read -rp "Proceed with rebuild and commit? [y/N] > " confirm
@@ -18,13 +20,11 @@ if [[ ! "$confirm" =~ ^[Yy]$  ]]; then
 fi
 
 echo "Rebuilding NixOS..."
+git add nixos/
 sudo nixos-rebuild switch --flake ~/dotfiles/nixos
 
 current=$(nixos-rebuild list-generations | grep current)
 
-cd "$REPO_DIR"
-
-git add nixos/
 git commit -am "$current"
 git push origin main
 
