@@ -3,7 +3,6 @@ name = "c"
 auto-format = true
 language-servers = [ "clangd" ]
 
-
 [[language]]
 name = "cpp"
 auto-format = true
@@ -13,6 +12,12 @@ language-servers = [ "clangd" ]
 name = "markdown"
 auto-format = true
 language-servers = [ "marksmman" ]
+
+[[language]]
+name = "python"
+formatter = { command = "black", args = [ "--quiet", "-", "--exclude", ".venv/" ] }
+auto-format = true
+language-servers = [ "pylsp" ]
 
 [[language]]
 name = "rust"
@@ -37,6 +42,9 @@ command = "clangd"
 
 [language-server.marksman]
 command = "marksman"
+
+[language-server.pylsp]
+command = "pylsp"
 
 [language-server.rust-analyzer]
 command = "rust-analyzer"
