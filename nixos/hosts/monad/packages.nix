@@ -22,6 +22,7 @@
     stow
 
     # cli tools
+    alejandra
     neofetch
     git
     gh
