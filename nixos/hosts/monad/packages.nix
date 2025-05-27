@@ -27,6 +27,7 @@
     docker
     docker-compose
     supabase-cli
+    openssl_3
 
     # lsp
     clang-tools

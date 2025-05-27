@@ -17,7 +17,7 @@ language-servers = [ "marksmman" ]
 [[language]]
 name = "rust"
 auto-format = true
-langauge-servers = [ "rust-analyzer" ]
+language-servers = [ "rust-analyzer" ]
 
 [[language]]
 name = "javascript"
