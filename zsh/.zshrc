@@ -1,6 +1,6 @@
 # aliases
 alias neko='echo miao'
-alias nix-rebuild='sudo nixos-rebuild switch --flake ~/dotfiles/nixos'
+alias nix-rebuild='$HOME/dotfiles/rebuild.sh'
 
 alias gd='git diff'
 alias ga='git add'

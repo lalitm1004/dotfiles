@@ -1,6 +1,6 @@
-{ pkgs, ... }: {
-  nixpkgs.config.allowUnfreePredicate =
-    pkg: builtins.elem (pkgs.lib.getName pkg) [
+{pkgs, ...}: {
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (pkgs.lib.getName pkg) [
       "discord"
       "brave"
     ];
@@ -12,7 +12,7 @@
     # editors
     helix
     vim
-  
+
     # applications
     brave
     discord

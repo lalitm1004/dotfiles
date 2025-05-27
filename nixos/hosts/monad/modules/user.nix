@@ -1,7 +1,7 @@
-{ pkgs, ...  }: {
+{pkgs, ...}: {
   programs.zsh.enable = true;
 
-  users= {
+  users = {
     defaultUserShell = pkgs.zsh;
 
     users.lalit = {
