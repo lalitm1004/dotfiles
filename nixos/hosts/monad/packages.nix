@@ -28,6 +28,7 @@
     docker-compose
     supabase-cli
     openssl_3
+    prisma-engines
 
     # lsp
     clang-tools
