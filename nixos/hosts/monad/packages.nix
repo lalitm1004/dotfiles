@@ -51,6 +51,7 @@
     zoxide
     ripgrep
     htop
+    fzf
 
     # dotfile manager
     stow
