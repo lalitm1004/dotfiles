@@ -37,6 +37,10 @@
     typescript-language-server
     tinymist
     marksman
+    (python3.withPackages (ps:
+      with ps; [
+        python-lsp-server
+      ]))
 
     # cli tools
     alejandra
