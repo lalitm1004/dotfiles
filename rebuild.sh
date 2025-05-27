@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
+REPO_DIR=~/dotfiles
 CONFIG_DIR=~/dotfiles/nixos
 cd "$CONFIG_DIR"
 
@@ -17,13 +18,13 @@ if [[ ! "$confirm" =~ ^[Yy]$  ]]; then
 fi
 
 echo "Rebuilding NixOS..."
-sudo nixos-rebuild switch --flake ~/dotfiles/nixos &>nixos-switch.log || {
-  grep --color error nixos-switch.log || cat nixos-switch.log
-  exit 1
-}
+sudo nixos-rebuild switch --flake ~/dotfiles/nixos
 
 current=$(nixos-rebuild list-generations | grep current)
 
+cd "$REPO_DIR"
+
+git add nixos/
 git commit -am "$current"
 git push origin main
 
