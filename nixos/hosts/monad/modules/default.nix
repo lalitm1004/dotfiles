@@ -6,5 +6,6 @@
     ./internationalisation.nix
     ./env.nix
     ./user.nix
+    ./fonts.nix
   ];
 }
