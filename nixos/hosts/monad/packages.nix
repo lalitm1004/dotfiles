@@ -1,32 +1,61 @@
 {pkgs, ...}: {
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (pkgs.lib.getName pkg) [
-      "discord"
-      "brave"
-    ];
-
   environment.systemPackages = with pkgs; [
     # terminals
     alacritty
-    kitty
 
     # editors
     helix
     vim
 
-    # applications
+    # desktop applications
     brave
     discord
     vlc
 
-    # dotfile manager
-    stow
+    # other
+    typst
+
+    # development
+    gnumake
+    clang
+    gcc
+    cargo
+    rustc
+    uv
+    nodejs_22
+    go
+    docker
+    docker-compose
+    supabase-cli
+
+    # lsp
+    clang-tools
+    rust-analyzer
+    typescript-language-server
+    tinymist
+    marksman
 
     # cli tools
     alejandra
+    black
     neofetch
     git
     gh
     zoxide
+    ripgrep
+    htop
+
+    # dotfile manager
+    stow
   ];
+
+  # enable docker on startup
+  virtualisation.docker.enable = true;
+
+  # granular allow unfree
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (pkgs.lib.getName pkg) [
+      "discord"
+      "brave"
+    ];
 }

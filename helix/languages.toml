@@ -1,0 +1,48 @@
+[[language]]
+name = "c"
+auto-format = true
+language-servers = [ "clangd" ]
+
+
+[[language]]
+name = "cpp"
+auto-format = true
+language-servers = [ "clangd" ]
+
+[[language]]
+name = "markdown"
+auto-format = true
+language-servers = [ "marksmman" ]
+
+[[language]]
+name = "rust"
+auto-format = true
+langauge-servers = [ "rust-analyzer" ]
+
+[[language]]
+name = "javascript"
+auto-format = true
+language-servers = [ "typescript-language-server" ]
+
+
+[[language]]
+name = "typescript"
+auto-format = true
+language-servers = [ "typescript-language-server" ]
+
+# -----------------------------------------------------------------------
+
+[language-server.clangd]
+command = "clangd"
+
+[language-server.marksman]
+command = "marksman"
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.tinymist]
+command = "tinymist"
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"

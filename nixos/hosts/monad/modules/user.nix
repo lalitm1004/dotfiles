@@ -11,6 +11,7 @@
         "networkmanager"
         "wheel"
         "input"
+        "docker"
       ];
       packages = with pkgs; [];
     };
