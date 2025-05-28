@@ -16,7 +16,7 @@ language-servers = ["clangd"]
 [[language]]
 name = "lua"
 auto-format = true
-language-servers = ["lua"]
+language-servers = ["lua-language-server"]
 
 [[language]]
 name = "markdown"
