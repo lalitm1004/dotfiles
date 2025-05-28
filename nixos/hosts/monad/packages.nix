@@ -36,6 +36,9 @@
         python-lsp-server
       ]))
     lua-language-server
+    yaml-language-server
+    taplo
+    bash-language-server
 
     # cli tools
     alejandra
