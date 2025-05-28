@@ -12,7 +12,6 @@
 
     # other
     obsidian
-    gimp
 
     # games
     prismlauncher
