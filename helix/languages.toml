@@ -25,7 +25,7 @@ language-servers = ["marksmman"]
 
 [[language]]
 name = "nix"
-formatter = { command = "alejandra", args = ["."] }
+formatter = { command = "nixpkgs-fmt" }
 language-servers = ["nil"]
 
 [[language]]

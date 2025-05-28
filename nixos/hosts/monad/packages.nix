@@ -39,6 +39,7 @@
     taplo
     bash-language-server
     nil
+    nixpkgs-fmt
 
     # cli tools
     alejandra
