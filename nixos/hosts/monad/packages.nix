@@ -50,6 +50,9 @@
 
     # dotfile manager
     stow
+
+    # gaming
+    protonup
   ];
 
   # granular allow unfree
@@ -66,8 +69,15 @@
 
   programs.steam = {
     enable = true;
+    gamescopeSession.enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
+  };
+
+  programs.gamemode.enable = true;
+
+  environment.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/lalit/.steam/root/compatibilitytools.d";
   };
 }
