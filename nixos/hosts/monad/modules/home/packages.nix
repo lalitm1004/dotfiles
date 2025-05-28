@@ -9,6 +9,9 @@
     brave
     discord
     vlc
+
+    # games
+    prismlauncher
   ];
 
   # granular allow unfree
