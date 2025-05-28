@@ -17,9 +17,7 @@
 
   time.timeZone = "Asia/Kolkata";
 
-  hardware.opengl = {
-    enable = true;
-  };
+  hardware.graphics.enable = true;
 
   system.stateVersion = "25.05";
 }
