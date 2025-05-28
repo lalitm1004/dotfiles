@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{ inputs, pkgs, ... }: {
   programs.zsh.enable = true;
 
   users = {
@@ -17,13 +13,12 @@
         "input"
         "docker"
       ];
-      packages = with pkgs; [];
     };
   };
 
   # home-manager
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = { inherit inputs; };
     users = {
       "lalit" = import ./home;
     };

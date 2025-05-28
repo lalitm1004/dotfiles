@@ -10,19 +10,16 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    ...
-  } @ inputs: {
-    nixosConfigurations = {
-      monad = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/monad/configuration.nix
-          inputs.home-manager.nixosModules.default
-        ];
+  outputs =
+    { self, nixpkgs, ... } @ inputs: {
+      nixosConfigurations = {
+        monad = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/monad/configuration.nix
+            inputs.home-manager.nixosModules.default
+          ];
+        };
       };
     };
-  };
 }

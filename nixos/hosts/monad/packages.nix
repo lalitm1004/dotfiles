@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     # terminals
     alacritty
@@ -42,7 +42,6 @@
     nixpkgs-fmt
 
     # cli tools
-    alejandra
     black
     bat
     neofetch

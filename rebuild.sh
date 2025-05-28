@@ -2,12 +2,6 @@
 set -e
 
 REPO_DIR=~/dotfiles
-CONFIG_DIR=~/dotfiles/nixos
-cd "$CONFIG_DIR"
-
-echo "Formatting .nix files..."
-alejandra .
-
 cd "$REPO_DIR"
 
 echo "Showing diffs > "
