@@ -1,47 +1,78 @@
 [[language]]
+name = "bash"
+auto-format = true
+language-servers = ["bash-language-server"]
+
+[[language]]
 name = "c"
 auto-format = true
-language-servers = [ "clangd" ]
+language-servers = ["clangd"]
 
 [[language]]
 name = "cpp"
 auto-format = true
-language-servers = [ "clangd" ]
+language-servers = ["clangd"]
+
+[[language]]
+name = "lua"
+auto-format = true
+language-servers = ["lua"]
 
 [[language]]
 name = "markdown"
 auto-format = true
-language-servers = [ "marksmman" ]
+language-servers = ["marksmman"]
+
+[[language]]
+name = "nix"
+formatter = { command = "alejandra", args = ["."] }
+language-servers = ["nil"]
 
 [[language]]
 name = "python"
-formatter = { command = "black", args = [ "--quiet", "-", "--exclude", ".venv/" ] }
+formatter = { command = "black", args = [
+  "--quiet",
+  "-",
+  "--exclude",
+  ".venv/",
+] }
 auto-format = true
-language-servers = [ "pylsp" ]
+language-servers = ["pylsp"]
 
 [[language]]
 name = "rust"
 auto-format = true
-language-servers = [ "rust-analyzer" ]
+language-servers = ["rust-analyzer"]
+
+[[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["fmt", "-"] }
 
 [[language]]
 name = "javascript"
 auto-format = true
-language-servers = [ "typescript-language-server" ]
+language-servers = ["typescript-language-server"]
 
 
 [[language]]
 name = "typescript"
 auto-format = true
-language-servers = [ "typescript-language-server" ]
+language-servers = ["typescript-language-server"]
 
 # -----------------------------------------------------------------------
+
+[language-server.bash-language-server]
+command = "bash-language-server"
 
 [language-server.clangd]
 command = "clangd"
 
 [language-server.marksman]
 command = "marksman"
+
+[language-server.nil]
+command = "nil"
 
 [language-server.pylsp]
 command = "pylsp"
@@ -54,3 +85,6 @@ command = "tinymist"
 
 [language-server.typescript-language-server]
 command = "typescript-language-server"
+
+[language-server.lua-language-server]
+command = "lua-language-server"
