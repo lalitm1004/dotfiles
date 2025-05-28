@@ -7,11 +7,6 @@
     helix
     vim
 
-    # desktop applications
-    brave
-    discord
-    vlc
-
     # other
     typst
 
@@ -59,11 +54,4 @@
 
   # enable docker on startup
   virtualisation.docker.enable = true;
-
-  # granular allow unfree
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (pkgs.lib.getName pkg) [
-      "discord"
-      "brave"
-    ];
 }

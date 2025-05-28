@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.zsh.enable = true;
 
   users = {
@@ -6,7 +10,7 @@
 
     users.lalit = {
       isNormalUser = true;
-      description = "lalitm1004";
+      description = "lalit";
       extraGroups = [
         "networkmanager"
         "wheel"
@@ -15,5 +19,14 @@
       ];
       packages = with pkgs; [];
     };
+  };
+
+  # home-manager
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "lalit" = import ./home;
+    };
+    backupFileExtension = "backup";
   };
 }
