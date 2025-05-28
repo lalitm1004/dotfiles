@@ -3,7 +3,7 @@
     ".zshenv".text = ''
       export ZDOTDIR="$HOME/.config/zsh"
     '';
-    "$home/.config/user-dirs.dirs".text = ''
+    ".config/user-dirs.dirs".text = ''
       XDG_DESKTOP_DIR="$HOME/.home/Desktop"
       XDG_DOWNLOAD_DIR="$HOME/.home/Downloads"
       XDG_DOCUMENTS_DIR="$HOME/.home/Documents"
