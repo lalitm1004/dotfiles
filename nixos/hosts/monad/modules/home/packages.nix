@@ -9,8 +9,6 @@
     brave
     discord
     vlc
-
-    lutris
   ];
 
   # granular allow unfree
@@ -18,9 +16,5 @@
     builtins.elem (pkgs.lib.getName pkg) [
       "discord"
       "brave"
-      "steam"
-      "steam-original"
-      "steam-unwrapped"
-      "steam-run"
     ];
 }
