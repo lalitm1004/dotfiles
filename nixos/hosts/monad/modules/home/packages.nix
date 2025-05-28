@@ -9,6 +9,8 @@
     brave
     discord
     vlc
+
+    protonplus
   ];
 
   # granular allow unfree
