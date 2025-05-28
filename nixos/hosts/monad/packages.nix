@@ -52,32 +52,32 @@
     stow
 
     # gaming
-    protonup
+    # protonup
   ];
 
   # granular allow unfree
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (pkgs.lib.getName pkg) [
-      "steam"
-      "steam-original"
-      "steam-unwrapped"
-      "steam-run"
+      # "steam"
+      # "steam-original"
+      # "steam-unwrapped"
+      # "steam-run"
     ];
 
   # enable docker on startup
   virtualisation.docker.enable = true;
 
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-  };
+  # programs.steam = {
+  #   enable = true;
+  #   gamescopeSession.enable = true;
+  #   remotePlay.openFirewall = true;
+  #   dedicatedServer.openFirewall = true;
+  #   localNetworkGameTransfers.openFirewall = true;
+  # };
 
-  programs.gamemode.enable = true;
+  # programs.gamemode.enable = true;
 
-  environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/lalit/.steam/root/compatibilitytools.d";
-  };
+  # environment.sessionVariables = {
+  #   STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/lalit/.steam/root/compatibilitytools.d";
+  # };
 }
