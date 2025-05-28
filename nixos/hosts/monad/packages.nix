@@ -22,9 +22,7 @@
     docker
     docker-compose
     supabase-cli
-    openssl_3
-    prisma
-    prisma-engines
+    tmux
 
     # lsp
     clang-tools

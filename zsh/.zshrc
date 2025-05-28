@@ -65,7 +65,7 @@ alias gi='git init'
 alias gcl='git clone'
 
 alias cat="bat"
-
+alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 # path
 export PATH="$PATH:$HOME/.cargo/bin:"
 
