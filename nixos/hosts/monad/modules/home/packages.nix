@@ -10,6 +10,9 @@
     discord
     vlc
 
+    # other
+    obsidian
+
     # games
     prismlauncher
   ];
@@ -19,5 +22,6 @@
     builtins.elem (pkgs.lib.getName pkg) [
       "discord"
       "brave"
+      "obsidian"
     ];
 }
