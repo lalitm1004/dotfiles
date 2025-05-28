@@ -40,6 +40,7 @@
     # cli tools
     alejandra
     black
+    bat
     neofetch
     git
     gh

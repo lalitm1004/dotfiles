@@ -64,6 +64,8 @@ alias gs='git status'
 alias gi='git init'
 alias gcl='git clone'
 
+alias cat="bat"
+
 # path
 export PATH="$PATH:$HOME/.cargo/bin:"
 
