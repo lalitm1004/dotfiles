@@ -35,6 +35,7 @@
       with ps; [
         python-lsp-server
       ]))
+    lua-language-server
 
     # cli tools
     alejandra
