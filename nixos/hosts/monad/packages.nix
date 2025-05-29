@@ -17,6 +17,7 @@
     gcc
     cargo
     rustc
+    python313
     uv
     nodejs_22
     go
