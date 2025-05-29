@@ -28,6 +28,7 @@
     # lsp
     clang-tools
     rust-analyzer
+    rustfmt
     typescript-language-server
     tinymist
     marksman
