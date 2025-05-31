@@ -14,20 +14,9 @@ auto-format = true
 language-servers = ["clangd"]
 
 [[language]]
-name = "lua"
+name = "prisma"
 auto-format = true
-language-servers = ["lua-language-server"]
-
-[[language]]
-name = "markdown"
-auto-format = true
-language-servers = ["marksmman"]
-
-[[language]]
-name = "nix"
-auto-format = true
-formatter = { command = "nixpkgs-fmt" }
-language-servers = ["nil"]
+language-servers = ["prisma-language-server"]
 
 [[language]]
 name = "python"
@@ -69,23 +58,14 @@ command = "bash-language-server"
 [language-server.clangd]
 command = "clangd"
 
-[language-server.marksman]
-command = "marksman"
-
-[language-server.nil]
-command = "nil"
-
 [language-server.pylsp]
 command = "pylsp"
+
+[language-server.prisma-language-server]
+command = "prisma-language-server"
 
 [language-server.rust-analyzer]
 command = "rust-analyzer"
 
-[language-server.tinymist]
-command = "tinymist"
-
 [language-server.typescript-language-server]
 command = "typescript-language-server"
-
-[language-server.lua-language-server]
-command = "lua-language-server"
