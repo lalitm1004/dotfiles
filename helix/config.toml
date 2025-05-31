@@ -1,0 +1,26 @@
+theme = "flexoki_dark"
+
+[editor]
+auto-format = true
+line-number = "relative"
+cursorline = true
+insert-final-newline = false
+gutters = ["line-numbers", "spacer", "diff"]
+idle-timeout = 1
+bufferline = "always"
+completion-timeout = 1
+completion-trigger-len = 1
+mouse = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[keys.normal]
+"C-u" = ["half_page_up", "align_view_center"]
+"C-d" = ["half_page_down", "align_view_center"]
+"C-b" = ["page_up", "align_view_center"]
+"C-f" = ["page_down", "align_view_center"]
+"A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
