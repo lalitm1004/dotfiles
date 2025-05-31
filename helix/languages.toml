@@ -27,7 +27,7 @@ formatter = { command = "black", args = [
   ".venv/",
 ] }
 auto-format = true
-language-servers = ["pylsp"]
+language-servers = ["pyright"]
 
 [[language]]
 name = "rust"
@@ -58,8 +58,12 @@ command = "bash-language-server"
 [language-server.clangd]
 command = "clangd"
 
-[language-server.pylsp]
-command = "pylsp"
+# [language-server.pylsp]
+# command = "pylsp"
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
 
 [language-server.prisma-language-server]
 command = "prisma-language-server"
