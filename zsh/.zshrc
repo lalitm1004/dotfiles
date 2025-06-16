@@ -65,6 +65,7 @@ alias gd='git pull'
 alias gs='git status'
 alias gi='git init'
 alias gcl='git clone'
+alias gl='git log'
 
 alias cat="bat"
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
@@ -74,6 +75,9 @@ alias tn='tmux new-session -s'
 alias tl='tmux list-sessions'
 alias ta='tmux attach-session'
 alias tk='tmux kill-session'
+
+alias tree='tree --gitignore'
+alias prism='~/.local/bin/PrismLauncher.AppImage'
 
 # path
 export PATH="$PATH:$HOME/.cargo/bin:"
