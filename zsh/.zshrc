@@ -80,6 +80,7 @@ alias tree='tree --gitignore'
 alias prism='~/.local/bin/PrismLauncher.AppImage'
 
 # path
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin:"
 export PATH="$PATH:$HOME/.cargo/bin:"
 export PATH="$PATH:/usr/local/go/bin:"
 export PATH="$PATH:$HOME/.local/bin:"
