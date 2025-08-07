@@ -84,7 +84,8 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin:"
 export PATH="$PATH:$HOME/.cargo/bin:"
 export PATH="$PATH:/usr/local/go/bin:"
 export PATH="$PATH:$HOME/.local/bin:"
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:$(go env GOPATH)/bin:"
+export PATH="$PATH:home/lalit/.surrealdb:"
 . "$HOME/.cargo/env"
 
 # nvm
@@ -92,3 +93,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 eval "$(zoxide init zsh)"
+
+pyrightinit() {
+	cp ~/.config/pyright/pyrightconfig.json ./pyrightconfig.json
+	echo "Copied pyrightconfig.json to ${pwd}"
+}

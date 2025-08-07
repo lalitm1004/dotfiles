@@ -14,7 +14,7 @@ end)
 
 
 -- Keybinds
-config.leader = { mods="CTRL",  key = "x", timeout_milliseconds = 2000 }
+config.leader = { key = "`", timeout_milliseconds = 2000 }
 config.keys = {
   {
     mods = "LEADER",

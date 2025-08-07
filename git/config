@@ -19,3 +19,4 @@
 [core]
 	compression = 9
 	preloadindex = true
+	editor = hx

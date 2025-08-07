@@ -20,15 +20,9 @@ language-servers = ["prisma-language-server"]
 
 [[language]]
 name = "python"
-formatter = { command = "black", args = [
-  "--quiet",
-  "-",
-  "--exclude",
-  ".venv/",
-] }
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
-language-servers = ["pyright"]
+language-servers = ["ruff", "pyright"]
 
 [[language]]
 name = "rust"
@@ -76,6 +70,10 @@ args = ["--stdio"]
 
 [language-server.rust-analyzer]
 command = "rust-analyzer"
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
 
 [language-server.typescript-language-server]
 command = "typescript-language-server"
