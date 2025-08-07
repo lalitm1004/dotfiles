@@ -96,5 +96,5 @@ eval "$(zoxide init zsh)"
 
 pyrightinit() {
 	cp ~/.config/pyright/pyrightconfig.json ./pyrightconfig.json
-	echo "Copied pyrightconfig.json to ${pwd}"
+	echo "Copied pyrightconfig.json to current directory"
 }

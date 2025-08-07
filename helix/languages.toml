@@ -61,9 +61,6 @@ command = "bash-language-server"
 [language-server.clangd]
 command = "clangd"
 
-# [language-server.pylsp]
-# command = "pylsp"
-
 [language-server.pyright]
 command = "pyright-langserver"
 args = ["--stdio"]
