@@ -1,0 +1,27 @@
+[[language]]
+name = "fish"
+language-servers = ["fish-lsp"]
+
+[[language]]
+name = "nix"
+auto-format = true
+language-servers = ["nil"]
+
+[[language]]
+name = "toml"
+auto-format = true
+language-servers = ["taplo"]
+
+[[language]]
+name = "rust"
+auto-format = true
+language-servers = ["rust-analyzer"]
+
+
+[language-server]
+fish-lsp = { command = "fish-lsp", args = [
+  "start",
+], environment = { "fish_lsp_show_client_popups" = "false" } }
+nil = { command = "nil" }
+rust-analyzer = { command = "rust-analyzer" }
+taplo = { command = "taplo", args = ["lsp", "stdio"] }

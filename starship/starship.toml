@@ -1,0 +1,118 @@
+palette = "flexoki_dark"
+format = """
+$username\
+$hostname\
+$os\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$fill\
+$cmd_duration\
+$line_break\
+$character\
+"""
+
+[username]
+format = '[$user]($style)'
+show_always = false
+style_user = "bold teal"
+
+[hostname]
+format = '@[$hostname]($style)'
+style = "bold green"
+ssh_only = true
+
+[os]
+format = '[$symbol]($style) '
+disabled = false
+style = "bold cyan"
+symbols.Arch = '󰣇'
+symbols.Ubuntu = ''
+symbols.NixOS = '󱄅'
+
+[directory]
+format = """
+[$path]($style)\
+[$read_only]($read_only_style) \
+"""
+read_only = " "
+read_only_style = "bold blue"
+style = "bold blue"
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+style = "bold green"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bold green"
+
+[git_status]
+style = "bold green"
+
+[fill]
+symbol = ' '
+
+[cmd_duration]
+min_time = 1_000
+format = ' [ $duration]($style)'
+style = "bold text"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+[palettes.tokyo_night]
+red = "#f7768e"
+orange = "#ff9e64"
+yellow = "#e0af68"
+fg_dim = "#cfc9c2"
+green = "#9ece6a"
+teal = "#73dacb"
+cyan = "#b4f9f8"
+cyan_bright = "#2ac3de"
+sky = "#7dcfff"
+blue = "#7aa2f7"
+purple = "#bb9af7"
+fg_light = "#c0caf5"
+fg = "#a9b1d6"
+fg_dark = "#9aa5ce"
+comment = "#565f89"
+dark3 = "#414868"
+bg = "#1a1b26"
+
+[palettes.flexoki_dark]
+black = "#100F0F"
+white = "#CECDC3"
+red = "#AF3029"
+green = "#879A39"
+yellow = "#AD8301"
+blue = "#4385BE"
+purple = "#5E409D"
+cyan = "#24837B"
+magenta = "#A02F6F"
