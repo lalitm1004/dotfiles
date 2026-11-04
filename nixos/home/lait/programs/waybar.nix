@@ -9,9 +9,16 @@
         height = 32;
         spacing = 0;
 
-        modules-left = [ "clock" "hyprland/workspaces" ];
+        modules-left = [
+          "clock"
+          "hyprland/workspaces"
+        ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "network" "pulseaudio" "battery" ];
+        modules-right = [
+          "network"
+          "pulseaudio"
+          "battery"
+        ];
 
         "hyprland/workspaces" = {
           format = "{icon}";
@@ -53,7 +60,11 @@
           format = "{icon} {volume}%";
           format-muted = "󰝟";
           format-icons = {
-            default = [ "󰕿" "󰖀" "󰕾" ];
+            default = [
+              "󰕿"
+              "󰖀"
+              "󰕾"
+            ];
           };
           scroll-step = 5;
           on-click = "pamixer -t";
@@ -65,7 +76,18 @@
           format = "{icon} {capacity}%";
           format-charging = "󰂄 {capacity}%";
           format-full = "󰁹 {capacity}%";
-          format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+          format-icons = [
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
           states = {
             warning = 30;
             critical = 15;

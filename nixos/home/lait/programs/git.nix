@@ -1,0 +1,35 @@
+{ ... }: {
+  programs.git = {
+    enable = true;
+
+    settings = {
+      user = {
+        name = "lalitm1004";
+        email = "lalitm1004@gmail.com";
+      };
+
+      init.defaultBranch = "main";
+
+      status = {
+        branch = true;
+        showStash = true;
+        showUntrackedFiles = "all";
+      };
+
+      url = {
+        "https://github.com/lalitm1004/" = {
+          insteadOf = "lm:";
+        };
+
+        "https://github.com/" = {
+          insteadOf = "gh:";
+        };
+      };
+
+      core = {
+        compression = 9;
+        preloadindex = true;
+      };
+    };
+  };
+}
