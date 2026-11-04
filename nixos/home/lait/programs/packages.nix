@@ -1,67 +1,72 @@
 { inputs, pkgs, ... }: {
-
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    # Browsers
     brave
     firefox
+
+    # Communication
     discord
 
-    stow
-
-    ripgrep
-    iproute2
-
+    # Editors
     opencode
-
-    fish
-
-    gh
-
-    quickshell
-
     vscode
 
-    cloudflare-warp
-
+    # Terminal
+    fish
     kitty
-    fuzzel
-    waybar
-    mako
-    hyprlock
-    hypridle
-    hyprcursor
-    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
-    grim
-    slurp
-    cliphist
-    wl-clipboard
-    hyprpolkitagent
-    brightnessctl
-    pamixer
+
+    # Files
     kdePackages.dolphin
+
+    # Fonts
+    nerd-fonts.jetbrains-mono
+
+    # Hyprland / Wayland
+    awww
+    brightnessctl
+    cliphist
+    fuzzel
+    grim
+    hyprcursor
+    hypridle
+    hyprlock
+    hyprpolkitagent
+    mako
     networkmanager_dmenu
     networkmanagerapplet
-    inputs.awww.packages.${pkgs.system}.awww
+    pamixer
+    quickshell
+    slurp
+    wl-clipboard
 
-    nerd-fonts.jetbrains-mono
+    # Hyprland extras (flake inputs)
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+
+    # Utilities
+    cloudflare-warp
+    gh
+    iproute2
+    ripgrep
+    stow
 
     # Toolchains
 
     # C / C++
-    gcc
-    gdb
     clang-tools
     cmake
+    gcc
+    gdb
     gnumake
     pkg-config
 
     # Rust
     cargo
-    rustc
-    rustfmt
     clippy
     rust-analyzer
+    rustc
+    rustfmt
 
     # Go
     go
@@ -71,16 +76,16 @@
     nixfmt
 
     # Language servers
-    nil
-    typescript-language-server
-    vscode-langservers-extracted
     lua-language-server
+    nil
     pyright
+    qt6.qtdeclarative
     ruff
     svelte-language-server
     taplo
+    typescript-language-server
+    vscode-langservers-extracted
     yaml-language-server
     yamlfmt
-    qt6.qtdeclarative
   ];
 }

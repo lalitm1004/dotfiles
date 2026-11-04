@@ -22,7 +22,7 @@
 
       ---- AUTOSTART ----
       hl.on("hyprland.start", function()
-          hl.exec_cmd("waybar")
+          hl.exec_cmd("quickshell")
           hl.exec_cmd("mako")
           hl.exec_cmd("awww-daemon")
           hl.exec_cmd("hypridle")
@@ -82,8 +82,8 @@
 
       ---- LAYER RULES ----
       hl.layer_rule({
-          name  = "waybar-blur",
-          match = { namespace = "waybar" },
+          name  = "quickshell-blur",
+          match = { namespace = "quickshell.*" },
           blur  = true,
           ignore_alpha = 0.4,
           xray  = true,
@@ -143,6 +143,13 @@
           },
       })
 
+      ---- GESTURES ----
+      hl.gesture({
+          fingers = 3,
+          direction = "horizontal",
+          action = "workspace",
+      })
+
       ---- KEYBINDINGS ----
       local mainMod = "SUPER"
 
@@ -176,6 +183,23 @@
       hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
       hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
       hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+
+      ---- WINDOW MOVEMENT (swap with neighbor) ----
+      hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({ direction = "left" }))
+      hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
+      hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.move({ direction = "up" }))
+      hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.move({ direction = "down" }))
+
+      ---- RESIZE (keyboard) ----
+      hl.bind(mainMod .. " + CTRL + right", hl.dsp.window.resize({ x = 20, y = 0, relative = true }), { repeating = true })
+      hl.bind(mainMod .. " + CTRL + left",  hl.dsp.window.resize({ x = -20, y = 0, relative = true }), { repeating = true })
+      hl.bind(mainMod .. " + CTRL + up",    hl.dsp.window.resize({ x = 0, y = -20, relative = true }), { repeating = true })
+      hl.bind(mainMod .. " + CTRL + down",  hl.dsp.window.resize({ x = 0, y = 20, relative = true }), { repeating = true })
+
+      ---- FULLSCREEN / CYCLE ----
+      hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+      hl.bind(mainMod .. " + Tab", hl.dsp.window.cycle_next())
+      hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.window.cycle_next({ next = false }))
 
       ---- WORKSPACES ----
       for i = 1, 9 do

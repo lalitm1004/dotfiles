@@ -13,7 +13,6 @@
     ./programs/hyprpaper.nix
     ./programs/kitty.nix
     ./programs/packages.nix
-    ./programs/waybar.nix
     ./programs/zoxide.nix
   ];
 

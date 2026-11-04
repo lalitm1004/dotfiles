@@ -11,8 +11,6 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
-    awww.url = "git+https://codeberg.org/LGFae/awww";
-
     rose-pine-hyprcursor = {
       url = "github:ndom91/rose-pine-hyprcursor";
       inputs.nixpkgs.follows = "nixpkgs";
